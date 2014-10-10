@@ -1,4 +1,4 @@
-## Code for creating Plot1
+## Code for creating Plot4
 ## Assumptions:
 ##  1. The input data set is available in the working directory
 
@@ -47,7 +47,8 @@ with(df, lines(Time, Sub_metering_2, col='red'))
 with(df, lines(Time, Sub_metering_3, col='blue'))
 legend("topright", 
        legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'), 
-       col = c('black', 'red', 'blue'), lwd=2)
+       col = c('black', 'red', 'blue'), lwd=2,
+       bty='n')
 with(df, plot(Time, Global_reactive_power, type='l', xlab='datetime', ylab='Global_reactive_power'))
 dev.off() #Close the PNG device
 
